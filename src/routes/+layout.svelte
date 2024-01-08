@@ -1,40 +1,42 @@
 <script>
     function redirectToMail() {
-        window.location.href = "mailto:find.data@outlook.com?subject=Data Inquiry - Service Requested&body=Your message request";
+        window.location.href =
+            'mailto:find.data@outlook.com?subject=Data Inquiry - Service Requested&body=Your message request';
     }
 </script>
 
 <header class="header">
     <div class="header-container">
-    <img class="header-image" src="/logo_white.svg" alt="">
+        <img class="header-image" src="/logo_white.svg" alt="" />
 
-     <button class="header-button" on:click={redirectToMail}>
-        <div>
-            Contact us
-        </div>
-     </button>
-
+        <button class="header-button" on:click={redirectToMail}>
+            <div>Contact us</div>
+        </button>
     </div>
 </header>
 <slot />
 <footer class="footer">
     <div class="brand-footer">
         <div class="brand-image-container-footer">
-            <img class="brand-image-footer"  src="/logo_white.svg" alt="">
+            <img class="brand-image-footer" src="/logo_white.svg" alt="" />
         </div>
         <p class="brand-text-footer">
-            FindData offers any service that require, manage or extract data. Common services are: data aggregation, data analysis, scraping, APIs, neural networks fine tuning, and many more. Contact us to get any of your requests fulfilled by our expirience in the market.
+            FindData offers any service that require, manage or extract data.
+            Common services are: data aggregation, data analysis, scraping,
+            APIs, neural networks fine tuning, and many more. Contact us to get
+            any of your requests fulfilled by our expirience in the market.
         </p>
     </div>
 
     <div class="info-footer">
-        <a href="mailto:find.data@outlook.com?subject=Data Inquiry - Service Requested&body=Your message request">
+        <a
+            href="mailto:find.data@outlook.com?subject=Data Inquiry - Service Requested&body=Your message request"
+        >
             <p class="info-text-footer">Email</p>
         </a>
         <a href="https:/twitter.com/FindData_" target="_blank">
             <p class="info-text-footer">Twitter</p>
         </a>
-        
     </div>
 </footer>
 
@@ -98,10 +100,11 @@
 
         transition: all 125ms;
     }
-    .header-button:hover, .header-button:focus {
-        box-shadow: 
-        inset -2.75rem 0 0 0 #141f52,
-        inset 2.75rem 0 0 0 #141f52;  
+    .header-button:hover,
+    .header-button:focus {
+        box-shadow:
+            inset -2.75rem 0 0 0 #141f52,
+            inset 2.75rem 0 0 0 #141f52;
     }
 
     .footer {
@@ -148,12 +151,11 @@
         height: 100%;
 
         font-size: small;
-
     }
     @media (max-width: 900px) {
-    .brand-text-footer {
-        font-size: x-small;
-    }
+        .brand-text-footer {
+            font-size: x-small;
+        }
     }
     .info-footer {
         width: 20%;
@@ -179,5 +181,4 @@
     .info-text-footer:hover {
         border-color: rgba(255, 255, 255, 1);
     }
-
 </style>
